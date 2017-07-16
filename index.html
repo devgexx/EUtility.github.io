@@ -1,1 +1,90 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Email utilities v.02 - Free web app online</title>
+  <meta name="description" content="Email utilities online is Free web app for manipulate string list, email, username, address, phone, password, hash and more text String from database.">
+  <meta name="keywords" content="Email utilities online, Free Email utilities online, merge email pass online">
+  <meta name="author" content="g3xx">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600|Open+Sans|Vast+Shadow" rel="stylesheet" type="text/css">
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– 
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/index.css">
+ <link rel="stylesheet" href="css/index.css">
+  <!-- Favicon –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="//jenil.github.io/bulmaswatch/superhero/bulmaswatch.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-app="emailApp">
+  <!-- Primary Page Layout–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<section class="hero h">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Email utilities v.02
+      </h1>
+      <h2 class="subtitle">
+        Manipulation String List
+      </h2>
+    </div>
+  </div>
+       <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+      <nav class="tabs is-boxed is-fullwidth">
+        <div class="container">
+          <ul>
+            <li ng-class="act('/index')"><a class="alat" href="/index">Spliter</a></li>
+            <li ng-class="act('/split-mail')"><a class="alat" href="/split-mail">Split Mail</a></li>
+            <li ng-class="act('/grab-mai')"><a class="alat" href="/grab-mail">Grab Email</a></li>
+            <li ng-class="act('/merge-mail')"><a class="alat" href="/merge-mail">Merge Mail</a></li>
+            <li ng-class="act('/merge-mailkey')"><a class="alat" href="/merge-mailkey">Merge Mail:Key</a></li>
+            <li ng-class="act('/remove-duplicate')"><a class="alat" href="/remove-duplicate">Duplicated</a></li>
+            <li ng-class="act('/sorter')"><a class="alat" href="/sorter">Sort</a></li>
+            <a class="button is-primary is-outlined" ng-click="help()"><span class="icon"><i class="fa fa-question"></i></span> </a>
+          </ul>
+        </div>
+      </nav>
+  </div>
+</section>
+<br>
+<div class="container" ng-view>
+
+</div>    
+<!-- End Document–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+<div class=" f">
+  <div class="container">
+    <div class="content has-text-centered">
+      <b>AboutUs</b>
+      <p>
+        <strong>Email utilities v.02</strong> by <a href="http://g3xdev.com">g3xx</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.<br> The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.<br>
+        Made with <span class="icon"><i class="fa  fa-heart"></i></span> AngularJS, BulmaCSS, and Github
+      </p>
+      <p>
+        <a class="icon is-medium" href="https://pages.github.com/">
+          <i class="fa fa-github"></i>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- javascript -->
+<script "text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script "text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js"></script>
+<script "text/javascript" src="app.js"></script>
+</html>

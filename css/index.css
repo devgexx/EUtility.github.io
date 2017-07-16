@@ -1,0 +1,38 @@
+
+.h{
+   /* background-color: #2b3e50 !important ;
+    background: -webkit-linear-gradient(right, #2b3e50, #df691a);
+    background: -moz-linear-gradient(right, #2b3e50, #df691a);
+    background: -o-linear-gradient(right, #2b3e50, #df691a);
+    background: linear-gradient(to left, #2b3e50, #df691a);
+   */
+    font-family: 'Vast Shadow', cursive;
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.f {
+    background-color:#2f3a47 !important ;
+    padding: 30px 0;
+}
+.tx {
+    height: 400px;
+    border: 1px solid #df691a;
+    background-color: #2b3e50;
+    border-radius: 0;
+    color: #dee5ed;
+    padding: 10px;
+    line-height: 1.1em;
+    font-family: "Courier New", Courier, monospace;
+
+}
+.fa-alpha:before {
+    font-weight: 700;
+    content: '\03b1';
+}
+
+.fa-alpha-u:before {
+    font-weight: 700;
+    content: '\0391';
+}

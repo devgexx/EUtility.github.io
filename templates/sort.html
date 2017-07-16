@@ -1,0 +1,28 @@
+
+<div class="columns" >
+        <div class="column is-12" >
+                <textarea class="textarea tx" ng-model="textString" placeholder="paste your list"></textarea>
+                <center><br>
+                <a class="button is-primary is-outlined" href="#" ng-click="order(textString,'c')">
+                   <span class="icon"> <i class="fa fa-sort-amount-asc"></i> </span>
+                </a>
+                <a class="button is-primary is-outlined" href="#" ng-click="order(textString,'d')">
+                    <span class="icon"> <i class="fa fa-sort-amount-desc"></i> </span>
+                </a>
+                <a class="button is-primary is-outlined" href="#" ng-click="order(textString,'a')">
+                    <span class="icon"> <i class="fa fa-sort-alpha-asc"></i> </span>
+                </a>
+                <a class="button is-primary is-outlined" href="#" ng-click="order(textString,'b')">
+                    <span class="icon"> <i class="fa fa-sort-alpha-desc"></i> </span>
+                </a>
+                <a class="button is-primary is-outlined" href="#" ng-click="textString = textString.toUpperCase();">
+                    <span class="icon"> <i class="fa fa-alpha-u"></i> </span>
+                </a>
+                <a class="button is-primary is-outlined" href="#" ng-click="textString = textString.toLowerCase()">
+                    <span class="icon"> <i class="fa fa-alpha"></i> </span>
+                </a>
+                 <br><br>
+              
+                </center>
+        </div>
+</div>

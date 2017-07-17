@@ -34,7 +34,7 @@ app.run(function($rootScope,$location) {
           return ($location.path() === path) ? 'is-active' : '';
     };
   $rootScope.help = function() {
-          alert("hellow");
+          alert("The site or the authors are not responsible for any misuse of the information.");
     };
 });
 
@@ -48,13 +48,59 @@ app.filter("totalin", function(){
    }
 });
 
+app.directive('faker',function($timeout,$parse) {
+  return {
+    link: function(scope, element, attrs,  ctrl) {
+       scope.textString = '';
+       scope.textMail = '';
+       scope.textgrab = '';
+       scope.usermail = '';
+       scope.userpass = '';  
+       scope.userkey = '';  
+      var where = attrs.faker;
+       $timeout(function(){           
+        switch (where){
+            case 'index':
+                 for(var i =0; i < 10; i++)
+                    scope.textString += faker.name.firstName()+" : "+faker.phone.phoneNumberFormat()+" : "+faker.internet.domainName()+ " : "+faker.commerce.department() +" : "+faker.address.country()+"\n";        
+            break;
+            case 'mail':
+                for(var i =0; i < 10; i++)
+                    scope.textMail += faker.internet.email()+"\n";        
+            break;
+            case 'grab':
+              for(var i =0; i < 10; i++)
+                    scope.textgrab += faker.lorem.sentences()+" "+faker.internet.email()+"\n";
+            break;
+            case 'merge':
+              for(var i =0; i < 10; i++){
+                    scope.usermail += faker.internet.email()+"\n";
+                    scope.userpass += faker.internet.password()+"\n";
+             }
+            break;
+            case 'key':
+              for(var i =1; i < 10; i++){
+                    var k = Math.random().toString(36).substr(2, 5);
+                    scope.usermail += faker.internet.email()+":"+k+"\n";
+                    scope.userkey += k+":"+ faker.internet.password() +"\n";
+             }
+                
+            break;
+        }
+       
+    
+      }, 100);
+      
+     }
+  }
+});
 
 app.controller('IndexCtrl',function($scope){
         $scope.world = "hellow";
         $scope.tampil = false;
-        $scope.run = function(tmp){
+        $scope.run = function(tmps){
             $scope.tampil = true;
-            var r = tmp.split('\n');
+            var r = tmps.split('\n');
             $scope.obj = [];  
             angular.forEach(r, function(str,z) {
                     var s =  str.split(':');  
@@ -152,7 +198,7 @@ app.controller('GrabCtrl',function($scope){
         $scope.tampil = true;
         angular.forEach(b, function(str,i) {
             var c = str.split(':'); 
-            for (var ii=0; ii<a.length; ii++){
+            for (var ii=0; ii<a.length - 1; ii++){
                 var d = a[ii].split(':');
                 if (d[1].toLowerCase() === c[0].toLowerCase() )
                     hasil.push(d[0] +" : "+ c[1]);

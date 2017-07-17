@@ -2,8 +2,8 @@
 
 <div class="columns" >
         <div class="column is-12" ng-show="!tampil" >
-                <textarea class="textarea tx" ng-model="textString" placeholder="Paste u Text"></textarea>
-                <center><br><a class="button is-primary" href="#" ng-click="grab(textString)">Grab Email</a></center>
+                <textarea class="textarea tx" ng-model="textgrab" placeholder="Paste u Text" faker="grab"></textarea>
+                <center><br><a class="button is-primary" href="#" ng-click="grab(textgrab)">Grab Email</a></center>
         </div>
          <div class="column is-12"  ng-show="tampil">
                 <textarea class="textarea tx" ng-model="hasil" ></textarea>

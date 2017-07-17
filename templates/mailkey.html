@@ -1,11 +1,11 @@
 <div class="columns" >
         <div class="column is-6" ng-show="!tampil" >
                 <!-- Total Maillist {{ usermail.split("\n").length }}!-->
-                <textarea class="textarea tx"  ng-model="usermail" placeholder="Mail : Key"></textarea>
+                <textarea class="textarea tx"  ng-model="usermail" placeholder="Mail : Key" faker="key"></textarea>
         </div>
          <div class="column is-6" ng-show="!tampil">
                <!-- Total Username {{ userpass.split("\n").length }} !-->
-                <textarea class="textarea tx"  ng-model="userkey" placeholder="Key : Username"></textarea>
+                <textarea class="textarea tx"  ng-model="userkey" placeholder="Key : Username" faker="key"></textarea>
         </div>
          <div class="column is-12" ng-show="tampil">
                 <textarea class="textarea tx" ng-model="hasil" ></textarea>

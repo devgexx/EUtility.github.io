@@ -1,11 +1,11 @@
 
 <div class="columns" >
         <div class="column is-12" ng-show="!tampil" >
-                <textarea class="textarea tx" ng-model="textMail" placeholder="Emaill List"></textarea>
+                <textarea class="textarea tx" ng-model="textMail" placeholder="Emaill List" faker='mail'></textarea>
                 <center><br><a class="button is-primary" href="#" ng-click="split(textMail)">Split Mail</a></center>
         </div>
          <div class="column" ng-repeat="f in fix" ng-show="tampil">
-                Total {{ fix[$index][0] }}: {{ total(fix[$index][1]) }}
+                {{ fix[$index][0] }}: {{ total(fix[$index][1]) }}
                 <textarea class="textarea tx" ng-model="fix[$index][1].join('\n')" ></textarea>
         </div>
 </div>

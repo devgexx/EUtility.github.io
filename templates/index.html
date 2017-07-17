@@ -1,7 +1,7 @@
 
  <div class="columns" >
         <div class="column is-12" ng-show="!tampil" >
-                <textarea class="textarea tx" ng-model="textString" placeholder="email : username : adresss : phone : etc (max 5 String)"></textarea>
+                <textarea class="textarea tx" faker="index" ng-model="textString" placeholder="email : username : adresss : phone : etc (max 5 String)"></textarea>
                 <center><br><a class="button is-primary" href="#" ng-click="run(textString)">Run Analyse</a></center>
         </div>
          <div class="column" ng-repeat="f in obj" ng-show="tampil" >
